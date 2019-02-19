@@ -1,0 +1,180 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+  display: flex; 
+  justify-content: center;
+  cursor: pointer;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #eee8a1;
+}
+
+.head { 
+  position: relative;
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.hair {
+  display:inline-block;
+  transform: rotate(-5deg);
+  background: #0a4d5e;
+  position: absolute;
+  height: 70px;
+  border-radius: 70% 0;
+  width: 215px;
+  left: -5px;
+  top: -10px;
+  transition: 0.5s ease-in;
+}
+
+.eyes {
+	display: flex;
+  translateX(0);
+  transition: .5s ease-in-out;
+}
+
+.hello {
+  padding: 0;
+  font-size: 30px;
+  position: absolute;
+  left: 220px;
+  padding: 0;
+  top: 45px;
+  color: white;
+  transform-origin: bottom left;
+  font-family: "Roboto", sans-serif;
+  background: red;
+  border-radius: 30px 30px 30px 0;
+  transition: 0.3s;
+  transform: scale(0,0) rotate(15deg);
+ transition: all 500ms cubic-bezier(0.000, -0.600, 0.000, 0.860); /* custom */
+}
+
+.head:hover {
+ transform-origin: bottom left;
+ transform: rotate(-5deg);
+}
+
+.head:hover .hello {
+  transform-origin: bottom left;
+  transition: 0.3s;
+   padding: 15px;
+  transform: scale(1,1) rotate(15deg);
+ transition: all 500ms cubic-bezier(0.000, -0.600, 0.000, 0.860); /* custom */
+}
+
+.head:hover .eyes{
+	transform: translateX(10px);
+    transition: .5s ease-in-out;
+}
+
+.head:hover .hair {
+  width: 210px;
+  top: -13px;
+  transform: rotate(-10deg);
+  transition: 0.5s ease-out;
+}
+
+.head:hover .left_eye {
+  transform: scale(1.5,1.5);
+  transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+} 
+
+.torso { 
+    z-index:1;
+  background: url('https://i.pinimg.com/736x/e9/5f/f5/e95ff5fc909803630f8899fbbf97b1e4.jpg');
+  background-size: cover;
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+  display: flex;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;
+  transition: .3s ease-in;
+  background: #05b7e3;
+  border-top: 5px solid black;
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
+
+
+
